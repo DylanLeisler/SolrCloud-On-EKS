@@ -5,7 +5,7 @@ output "id" {
 }
 
 output "cert" {
-  value = aws_eks_cluster.eks-cluster.certificate_authority[0].data
+  value = base64decode(aws_eks_cluster.eks-cluster.certificate_authority[0].data)
 }
 
 output "endpoint" {

@@ -24,3 +24,8 @@ variable "vpc_id" {
   description = "ID for the housing VPC"
   type        = string
 }
+
+variable "public_subnets" {
+  description = "A list of the public subnets from the VPC"
+  type        = any
+}

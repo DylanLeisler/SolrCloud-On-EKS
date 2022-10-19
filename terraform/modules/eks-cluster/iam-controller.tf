@@ -25,7 +25,7 @@ resource "aws_iam_role" "aws_load_balancer_controller" {
 
 resource "aws_iam_policy" "aws_load_balancer_controller" {
   name   = "${var.name-prefix}-AWSLoadBalancerController-${var.initials}"
-  policy = file("./modules/eks/AWSLoadBalancerController.json")
+  policy = file("./modules/eks-cluster/AWSLoadBalancerController.json")
 }
 
 resource "aws_iam_role_policy_attachment" "aws_load_balancer_controller_attach" {
